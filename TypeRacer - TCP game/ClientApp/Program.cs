@@ -3,34 +3,11 @@ using System.Net.Sockets;
 
 namespace Client;
 
-/// <summary>
-/// The main client application for the Typeracer game.
-/// Handles TCP connection, user input, and rendering the game UI.
-/// </summary>
 public static class Program
 {
 	const int Port = 5000;
-
-	/// <summary>
-	/// buffer to store the current word the user is typing (before pressing Space).
-	/// </summary>
 	static string _currentWordBuffer = "";
-
-	/// <summary>
-	/// Stores the progress of other players to render the leaderboard.
-	/// Key: Player Name, Value: Completion percentage (0-100).
-	/// </summary>
 	static Dictionary<string, int> _playersProgress = new Dictionary<string, int>();
-
-	/// <summary>
-	/// The entry point of the client application.
-	/// </summary>
-	/// <remarks>
-	/// 1. Prompts for the player's name.
-	/// 2. Connects to the server via TCP.
-	/// 3. Starts a background task to listen for server messages.
-	/// 4. enters the main input blocking loop.
-	/// </remarks>
 	public static async Task Main()
 	{
 		Console.Title = "GAME CLIENT";
@@ -53,11 +30,11 @@ public static class Program
 		var reader = new StreamReader(stream);
 		var writer = new StreamWriter(stream) { AutoFlush = true };
 
-		// 1. Send initial handshake with name
+		// Wysyłamy nazwę gracza do serwera
 		await writer.WriteLineAsync($"NAME|{playerName}");
 
-		// Start a background thread for receiving data to avoid blocking the input loop
-		_= Task.Run(async () => 
+		// Background task do odbierania wiadomości od serwera
+		_ = Task.Run(async () =>
 		{
 			try
 			{
@@ -68,36 +45,26 @@ public static class Program
 					HandleServerMessage(msg);
 				}
 			}
-			catch { 
-				Environment.Exit(0); 
-			} 
+			catch
+			{
+				Environment.Exit(0);
+			}
 		});
 
 		ProcessInputLoop(writer);
 	}
-
-	/// <summary>
-	/// Continuously reads keystrokes from the user to construct words.
-	/// </summary>
-	/// <param name="writer">The stream writer used to send completed words to the server.</param>
-	/// <remarks>
-	/// - Spacebar: Sends the current buffer as a word command (<c>WORD|...</c>).
-	/// - Backspace: Removes the last character from the buffer.
-	/// - Other keys: Appends to the buffer.
-	/// Uses <c>lock (Console.Out)</c> to prevent UI collisions with the listener thread.
-	/// </remarks>
+	// Pętla do odczytu wpisywanego tekstu i wysyłania słów do serwera
 	private static void ProcessInputLoop(StreamWriter writer)
 	{
 		while (true)
 		{
-			// Intercept: true hides the key from appearing automatically
+			// wCZYTUJEMY KLAWISZ
 			ConsoleKeyInfo keyInfo = Console.ReadKey(intercept: true);
 
 			lock (Console.Out)
 			{
 				if (keyInfo.Key == ConsoleKey.Spacebar)
 				{
-					// Send word on Space
 					if (!string.IsNullOrWhiteSpace(_currentWordBuffer))
 					{
 						writer.WriteLine($"WORD|{_currentWordBuffer}");
@@ -114,25 +81,16 @@ public static class Program
 					_currentWordBuffer += keyInfo.KeyChar;
 				}
 
-				// Refresh only the typing line
 				RedrawInputLine();
 			}
 		}
 	}
 
-	/// <summary>
-	/// Parses and acts upon raw text protocol messages received from the server.
-	/// </summary>
-	/// <param name="msg">The raw message string (e.g., "PROG|Player1|50").</param>
-	/// <remarks>
-	/// Handles cursor management (<c>CursorLeft</c>, <c>CursorTop</c>) to update the UI parts
-	/// (Lobby, Progress, Text) without disrupting the user's typing position at the bottom.
-	/// </remarks>
+	// Hadnluje wiadomości od serwera, czyli lobby dla graczy, tekst do wpisania, postęp graczy i ekran zwycięzcy
 	private static void HandleServerMessage(string msg)
 	{
 		lock (Console.Out)
 		{
-			// Save current cursor position to restore it after UI updates
 			int oldLeft = Console.CursorLeft;
 			int oldTop = Console.CursorTop;
 
@@ -151,7 +109,6 @@ public static class Program
 			}
 			else if (msg.StartsWith("TEXT|"))
 			{
-				// Game start - display the text to type
 				Console.Clear();
 				Console.WriteLine("=== TEXT TO TYPE ===");
 				Console.ForegroundColor = ConsoleColor.Yellow;
@@ -190,12 +147,7 @@ public static class Program
 		}
 	}
 
-	/// <summary>
-	/// Redraws the progress/leaderboard section based on <c>_playersProgress</c>.
-	/// </summary>
-	/// <remarks>
-	/// Draws at a fixed screen position (lines 5-8 typically) so it doesn't scroll the text.
-	/// </remarks>
+	// Rysuje tabelę postępu graczy poniżej tekstu do wpisania
 	private static void RedrawProgressTable()
 	{
 		int startLine = 5;
@@ -213,10 +165,6 @@ public static class Program
 			currentLine++;
 		}
 	}
-
-	/// <summary>
-	/// Redraws the user's input line at the bottom of the screen.
-	/// </summary>
 	private static void RedrawInputLine()
 	{
 		// Input line is always at the bottom, e.g., line 12
