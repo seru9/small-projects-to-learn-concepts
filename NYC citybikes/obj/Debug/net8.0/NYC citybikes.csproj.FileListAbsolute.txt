@@ -1,0 +1,15 @@
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\bin\Debug\net8.0\NYC citybikes.exe
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\bin\Debug\net8.0\NYC citybikes.deps.json
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\bin\Debug\net8.0\NYC citybikes.runtimeconfig.json
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\bin\Debug\net8.0\NYC citybikes.dll
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\bin\Debug\net8.0\NYC citybikes.pdb
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\obj\Debug\net8.0\NYC citybikes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\obj\Debug\net8.0\NYC citybikes.AssemblyInfoInputs.cache
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\obj\Debug\net8.0\NYC citybikes.AssemblyInfo.cs
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\obj\Debug\net8.0\NYC citybikes.csproj.CoreCompileInputs.cache
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\obj\Debug\net8.0\NYC citybikes.sourcelink.json
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\obj\Debug\net8.0\NYC citybikes.dll
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\obj\Debug\net8.0\refint\NYC citybikes.dll
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\obj\Debug\net8.0\NYC citybikes.pdb
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\obj\Debug\net8.0\NYC citybikes.genruntimeconfig.cache
+C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\NYC citybikes\obj\Debug\net8.0\ref\NYC citybikes.dll
