@@ -1,0 +1,39 @@
+﻿@model PcsSelcomWebLogger.Models.Users
+
+@{
+    ViewData["Title"] = "Logowanie";
+}
+
+<h2 class="text-center">Logowanie</h2>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="Login" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Username" class="form-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="PasswordHash" class="form-label">Hasło</label>
+                <input asp-for="PasswordHash" class="form-control" type="password" />
+                <span asp-validation-for="PasswordHash" class="text-danger"></span>
+            </div>
+
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary">Zaloguj się</button>
+                <p>Nie masz konta? <a asp-action="Register" asp-controller="Account">Zarejestruj się</a></p>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

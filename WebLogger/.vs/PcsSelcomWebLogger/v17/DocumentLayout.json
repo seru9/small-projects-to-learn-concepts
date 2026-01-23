@@ -1,0 +1,291 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|c:\\users\\aleks\\desktop\\code\\work\\pcsselcom\\training\\pcsselcomweblogger\\services\\cleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|solutionrelative:services\\cleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|c:\\users\\aleks\\desktop\\code\\work\\pcsselcom\\training\\pcsselcomweblogger\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|c:\\users\\aleks\\desktop\\code\\work\\pcsselcom\\training\\pcsselcomweblogger\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|c:\\users\\aleks\\desktop\\code\\work\\pcsselcom\\training\\pcsselcomweblogger\\controllers\\applogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|solutionrelative:controllers\\applogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|c:\\users\\aleks\\desktop\\code\\work\\pcsselcom\\training\\pcsselcomweblogger\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|c:\\users\\aleks\\desktop\\code\\work\\pcsselcom\\training\\pcsselcomweblogger\\data\\applogscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|solutionrelative:data\\applogscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|c:\\users\\aleks\\desktop\\code\\work\\pcsselcom\\training\\pcsselcomweblogger\\models\\applogsfilterviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|solutionrelative:models\\applogsfilterviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|c:\\users\\aleks\\desktop\\code\\work\\pcsselcom\\training\\pcsselcomweblogger\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|c:\\users\\aleks\\desktop\\code\\work\\pcsselcom\\training\\pcsselcomweblogger\\services\\logbufferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|solutionrelative:services\\logbufferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|c:\\users\\aleks\\desktop\\code\\work\\pcsselcom\\training\\pcsselcomweblogger\\services\\ilogbufferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|solutionrelative:services\\ilogbufferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|c:\\users\\aleks\\desktop\\code\\work\\pcsselcom\\training\\pcsselcomweblogger\\models\\applogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|solutionrelative:models\\applogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|c:\\users\\aleks\\desktop\\code\\work\\pcsselcom\\training\\pcsselcomweblogger\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DED5A29-D691-4607-B6A6-3A66F3946182}|PcsSelcomWebLogger.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 72,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{4a9b7e51-aa16-11d0-a8c5-00a0c921a4d2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T17:40:35.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T17:40:05.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T17:39:40.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppLogsController.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Controllers\\AppLogsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AppLogsController.cs",
+              "ToolTip": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Controllers\\AppLogsController.cs",
+              "RelativeToolTip": "Controllers\\AppLogsController.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAkwGQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T17:38:30.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "login.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Views\\Account\\login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\login.cshtml",
+              "ToolTip": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Views\\Account\\login.cshtml",
+              "RelativeToolTip": "Views\\Account\\login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T17:38:26.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T10:06:20.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppLogs.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Models\\AppLogs.cs",
+              "RelativeDocumentMoniker": "Models\\AppLogs.cs",
+              "ToolTip": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Models\\AppLogs.cs",
+              "RelativeToolTip": "Models\\AppLogs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T10:05:57.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppLogsContext.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Data\\AppLogsContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppLogsContext.cs",
+              "ToolTip": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Data\\AppLogsContext.cs",
+              "RelativeToolTip": "Data\\AppLogsContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T10:05:49.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ILogBufferService.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Services\\ILogBufferService.cs",
+              "RelativeDocumentMoniker": "Services\\ILogBufferService.cs",
+              "ToolTip": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Services\\ILogBufferService.cs",
+              "RelativeToolTip": "Services\\ILogBufferService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T10:05:15.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LogBufferService.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Services\\LogBufferService.cs",
+              "RelativeDocumentMoniker": "Services\\LogBufferService.cs",
+              "ToolTip": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Services\\LogBufferService.cs",
+              "RelativeToolTip": "Services\\LogBufferService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T10:05:15.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CleanupService.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Services\\CleanupService.cs",
+              "RelativeDocumentMoniker": "Services\\CleanupService.cs",
+              "ToolTip": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Services\\CleanupService.cs",
+              "RelativeToolTip": "Services\\CleanupService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T10:05:06.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppLogsFilterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Models\\AppLogsFilterViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\AppLogsFilterViewModel.cs",
+              "ToolTip": "C:\\Users\\aleks\\Desktop\\CODE\\Work\\PcsSelcom\\Training\\PcsSelcomWebLogger\\Models\\AppLogsFilterViewModel.cs",
+              "RelativeToolTip": "Models\\AppLogsFilterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T10:05:02.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 173,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:7:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1506,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 106,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
