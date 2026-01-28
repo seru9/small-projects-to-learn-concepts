@@ -4,3 +4,4 @@ Web appka typu CRUD, w skrócie:
 - Kontrolery do backendu i prosty frontEnd
 - nie ma js'a (nie lubie)
 - Oczywiście prawie wszystko asynchronicznie i korzystamy z LinQ :D
+https://youtu.be/OYldRpI5KYc
