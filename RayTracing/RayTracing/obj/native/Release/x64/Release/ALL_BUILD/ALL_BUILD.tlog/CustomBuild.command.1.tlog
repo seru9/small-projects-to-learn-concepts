@@ -1,0 +1,10 @@
+^C:\USERS\ALEKS\DESKTOP\CODE\P3 - PROGRAMOWANIE 3\STUDENT\RAYTRACING\NATIVE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/aleks/Desktop/CODE/P3 - Programowanie 3/student/RayTracing/native" "-BC:/Users/aleks/Desktop/CODE/P3 - Programowanie 3/student/RayTracing/obj/native/Release" --check-stamp-file "C:/Users/aleks/Desktop/CODE/P3 - Programowanie 3/student/RayTracing/obj/native/Release/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

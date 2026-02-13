@@ -1,0 +1,10 @@
+^C:\USERS\ALEKS\DESKTOP\CODE\P3 - PROGRAMOWANIE 3\STUDENT\RAYTRACING\OBJ\NATIVE\RELEASE\CMAKEFILES\A07A42E726F55BD3B7540B435A4928B5\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/aleks/Desktop/CODE/P3 - Programowanie 3/student/RayTracing/native" "-BC:/Users/aleks/Desktop/CODE/P3 - Programowanie 3/student/RayTracing/obj/native/Release" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/aleks/Desktop/CODE/P3 - Programowanie 3/student/RayTracing/obj/native/Release/rt.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

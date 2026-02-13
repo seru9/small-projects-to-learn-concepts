@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\student\RayTracing\native\export.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\aleks\Desktop\CODE\P3 - Programowanie 3\student\RayTracing\native\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C29C90F6-EF92-3BD0-9D47-2F7BC87CEB8F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
