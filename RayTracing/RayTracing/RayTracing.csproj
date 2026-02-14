@@ -12,6 +12,7 @@
   <ItemGroup>
     <NativeSources Include="native\**" />
     <None Include="@(NativeSources)" />
+    <None Include="SafeHandlers.cs" />
     <UpToDateCheckInput Include="@(NativeSources)" />
   </ItemGroup>
 
@@ -37,16 +38,12 @@
       <MakeDir Directories="$(NativeBuildDir)" />
 
       <!-- Konfiguracja dla Windows (Visual Studio generator, wielokonfiguracyjny) -->
-      <Exec Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))"
-            Command="cmake -S &quot;native&quot; -B &quot;$(NativeBuildDir)&quot; -G &quot;Visual Studio 17 2022&quot;" />
-      <Exec Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))"
-            Command="cmake --build &quot;$(NativeBuildDir)&quot; --config &quot;$(Configuration)&quot;" />
+      <Exec Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))" Command="cmake -S &quot;native&quot; -B &quot;$(NativeBuildDir)&quot; -G &quot;Visual Studio 17 2022&quot;" />
+      <Exec Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))" Command="cmake --build &quot;$(NativeBuildDir)&quot; --config &quot;$(Configuration)&quot;" />
 
       <!-- Konfiguracja dla Linux/macOS (Ninja lub Unix Makefiles, jednokonfiguracyjny) -->
-      <Exec Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux))) Or $([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))"
-            Command="cmake -S &quot;native&quot; -B &quot;$(NativeBuildDir)&quot; -G &quot;Ninja&quot; -DCMAKE_BUILD_TYPE=&quot;$(Configuration)&quot;" />
-      <Exec Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux))) Or $([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))"
-            Command="cmake --build &quot;$(NativeBuildDir)&quot;" />
+      <Exec Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux))) Or $([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))" Command="cmake -S &quot;native&quot; -B &quot;$(NativeBuildDir)&quot; -G &quot;Ninja&quot; -DCMAKE_BUILD_TYPE=&quot;$(Configuration)&quot;" />
+      <Exec Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux))) Or $([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))" Command="cmake --build &quot;$(NativeBuildDir)&quot;" />
   </Target>
 
 </Project>

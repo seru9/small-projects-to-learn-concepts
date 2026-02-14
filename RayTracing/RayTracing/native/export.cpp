@@ -24,7 +24,6 @@
 //Abi C-friendly API do renderowania sceny ray tracingowej z C++ do dowolnego jêzyka obs³uguj¹cego C ABI
 extern "C" {
 
-	// Wymagane przez specyfikacjê
 	typedef void (*RenderCallback)(int samples, uint8_t* buffer);
 
 	// Struktura konfiguracji kamery przekazywana przez wartoœæ (C ABI-friendly)
@@ -43,16 +42,25 @@ extern "C" {
 		double focus_dist;         
 	};
 
-	// MATERIAL
-	EXPORT void* CreateMaterial() {
-		return new material();
-	}
-	EXPORT void DestroyMaterial(void* materialPtr) {
-		if (materialPtr) {
-			delete static_cast<material*>(materialPtr);
-		}
+	EXPORT void* CreateLambertian(double r, double g, double b)
+	{
+		return new lambertian(color(r, g, b));
 	}
 
+	EXPORT void* CreateMetal(double r, double g, double b, double fuzz)
+	{
+		return new metal(color(r, g, b), fuzz);
+	}
+
+	EXPORT void* CreateDielectric(double refractionIndex)
+	{
+		return new dielectric(refractionIndex);
+	}
+
+	EXPORT void DestroyMaterial(void* materialPtr)
+	{
+		delete static_cast<material*>(materialPtr);
+	}
 	// SPHERE
 	EXPORT void* CreateSphere(double centerX, double centerY, double centerZ, double radius, void* materialPtr) {
 		auto mat = static_cast<material*>(materialPtr);
@@ -79,15 +87,15 @@ extern "C" {
 	}
 
 
-	//// Dodawanie sfery do sceny
-	//EXPORT bool SceneAddSphere(void* scenePtr, void* spherePtr) {
-	//	if (!scenePtr || !spherePtr) return false;
-	//	auto scene = static_cast<hittable_list*>(scenePtr);
-	//	auto sp = static_cast<sphere*>(spherePtr);
-	//	// Przekazanie w³asnoœci do shared_ptr - sfera bêdzie zwalniana przez scenê
-	//	scene->add(std::shared_ptr<hittable>(sp));
-	//	return true;
-	//}
+	// Dodawanie sfery do sceny
+	EXPORT bool SceneAddSphere(void* scenePtr, void* spherePtr) {
+		if (!scenePtr || !spherePtr) return false;
+		auto scene = static_cast<hittable_list*>(scenePtr);
+		auto sp = static_cast<sphere*>(spherePtr);
+		// Przekazanie w³asnoœci do shared_ptr - sfera bêdzie zwalniana przez scenê
+		scene->add(std::shared_ptr<hittable>(sp));
+		return true;
+	}
 
 	// RenderScene: tworzy lokalny obiekt camera i renderuje do bufora, z opcjonalnym callbackiem
 	// Callback ma sygnaturê: typedef void (*RenderCallback)(int samples, uint8_t* buffer);
