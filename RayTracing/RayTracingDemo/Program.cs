@@ -5,17 +5,14 @@ using RayTracing;
 
 class Program
 {
-	// Bufor RGBA8
 	private static byte[]? _rgba;
 	private static GCHandle _rgbaHandle;
 	private static nint _rgbaPtr;
 
-	// Postêp próbek
 	private static volatile int _lastSamples;
 
 	static void Main()
 	{
-		// Konfiguracja kamery (RTIOW: ok³adka)
 		var cfg = new CameraConfig
 		{
 			aspect_ratio = 3.0 / 2.0,
@@ -39,22 +36,18 @@ class Program
 		int width = cfg.image_width;
 		int height = (int)(width / cfg.aspect_ratio);
 
-		// Alokacja bufora obrazu
 		_rgba = new byte[width * height * 4];
 		_rgbaHandle = GCHandle.Alloc(_rgba, GCHandleType.Pinned);
 		_rgbaPtr = _rgbaHandle.AddrOfPinnedObject();
 
-		// Utworzenie sceny
 		var scene = NativeMethods.CreateScene();
 
-		// Proceduralna scena:
-		// Materia³y
 		var groundMat = NativeMethods.CreateLambertian(0.5, 0.5, 0.5);
 		var centerMat = NativeMethods.CreateLambertian(0.1, 0.2, 0.5);
 		var leftMat = NativeMethods.CreateDielectric(1.5);
 		var rightMat = NativeMethods.CreateMetal(0.8, 0.6, 0.2, 0.0);
 
-		// Sfery (ok³adka RTIOW)
+		// Sfery 
 		var ground = NativeMethods.CreateSphere(0.0, -1000.0, 0.0, 1000.0, groundMat);
 		var center = NativeMethods.CreateSphere(0.0, 1.0, 0.0, 1.0, centerMat);
 		var left = NativeMethods.CreateSphere(-4.0, 1.0, 0.0, 1.0, leftMat);
@@ -65,7 +58,7 @@ class Program
 		NativeMethods.SceneAddSphere(scene, left);
 		NativeMethods.SceneAddSphere(scene, right);
 
-		// Ma³e kule na ziemi (losowo)
+		// Male kule na ziemi
 		var rnd = new Random(42);
 		for (int a = -11; a < 11; a++)
 		{
@@ -76,12 +69,11 @@ class Program
 				var centerZ = b + 0.9 * rnd.NextDouble();
 				var centerY = 0.2;
 
-				// Oddal je od du¿ych kul
 				var dx = centerX - 4.0;
 				var dz = centerZ - 0.0;
 				if (Math.Sqrt(dx * dx + dz * dz) <= 0.9) continue;
 
-				// Zamieñ typ zmiennej mat z nint na MaterialSafeHandle
+				// zamien typ zmiennej mat z nint na MaterialSafeHandle
 				MaterialSafeHandle mat;
 				if (chooseMat < 0.8)
 				{
@@ -111,27 +103,22 @@ class Program
 			}
 		}
 
-		// Miernik czasu
 		var sw = Stopwatch.StartNew();
 
-		// Start okna i pêtli renderowania
 		Windowing.Viewer.Show(width, height, "Ray Tracing in One Weekend - Demo", updater =>
 		{
-			// Callback renderuj¹cy: dostaje liczbê próbek oraz wskaŸnik na bufor
+			// Callback renderujÂ¹cy: dostaje liczbÃª prÃ³bek oraz wskaÅ¸nik na bufor
 			RenderCallback progress = (samples, buffer) =>
 			{
 				_lastSamples = samples;
-				// Odœwie¿ wizualizacjê
-				updater.UpdateImage(new ReadOnlySpan<byte>(_rgba!)); // zaktualizuj obraz
+				updater.UpdateImage(new ReadOnlySpan<byte>(_rgba!)); // aktualizuje obraz
 				updater.UpdateStatus($"Samples: {samples}  Time: {sw.Elapsed:mm\\:ss}");
 			};
 
-			// Wywo³anie natywnego renderu (renderuje progresywnie i wo³a callback)
 			NativeMethods.RenderScene(cfg, scene, _rgbaPtr, progress);
-
-			// Zapis finalnego obrazu
+			
 			var ok = NativeMethods.SavePng("output.png", width, height, _rgbaPtr);
-			Console.WriteLine(ok ? "Zapisano output.png" : "B³¹d zapisu PNG");
+			Console.WriteLine(ok ? "Zapisano output.png" : "BÂ³Â¹d zapisu PNG");
 
 			_rgbaHandle.Free();
 		});
