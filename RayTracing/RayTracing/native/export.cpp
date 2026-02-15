@@ -21,12 +21,11 @@
 #endif
 #endif
 
-//Abi C-friendly API do renderowania sceny ray tracingowej z C++ do dowolnego jêzyka obs³uguj¹cego C ABI
+//Abi C do renderowania sceny ray tracingowej z C++ do dowolnego jÃªzyka obsÂ³ugujÂ¹cego C ABI
 extern "C" {
 
 	typedef void (*RenderCallback)(int samples, uint8_t* buffer);
 
-	// Struktura konfiguracji kamery przekazywana przez wartoœæ (C ABI-friendly)
 	struct CameraConfig {
 		double aspect_ratio;      
 		int    image_width;        
@@ -61,11 +60,10 @@ extern "C" {
 	{
 		delete static_cast<material*>(materialPtr);
 	}
-	// SPHERE
 	EXPORT void* CreateSphere(double centerX, double centerY, double centerZ, double radius, void* materialPtr) {
 		auto mat = static_cast<material*>(materialPtr);
 		if (!mat) return nullptr;
-		// shared_ptr do materia³u z niestandardowym deleterem (materia³ zarz¹dzany zewnêtrznie)
+		// shared_ptr do materiaÂ³u
 		return new sphere(point3(centerX, centerY, centerZ), radius, std::shared_ptr<material>(mat, [](material*) {/*externally owned*/}));
 	}
 
@@ -75,7 +73,6 @@ extern "C" {
 		}
 	}
 
-	// HITTABLE LIST (scena)
 	EXPORT void* CreateScene() {
 		return new hittable_list();
 	}
@@ -87,18 +84,15 @@ extern "C" {
 	}
 
 
-	// Dodawanie sfery do sceny
 	EXPORT bool SceneAddSphere(void* scenePtr, void* spherePtr) {
 		if (!scenePtr || !spherePtr) return false;
 		auto scene = static_cast<hittable_list*>(scenePtr);
 		auto sp = static_cast<sphere*>(spherePtr);
-		// Przekazanie w³asnoœci do shared_ptr - sfera bêdzie zwalniana przez scenê
+		// przekazanie wÂ³asnoÅ“ci do shared_ptr - sfera bÃªdzie zwalniana przez scenÃª
 		scene->add(std::shared_ptr<hittable>(sp));
 		return true;
 	}
 
-	// RenderScene: tworzy lokalny obiekt camera i renderuje do bufora, z opcjonalnym callbackiem
-	// Callback ma sygnaturê: typedef void (*RenderCallback)(int samples, uint8_t* buffer);
 	EXPORT bool RenderScene(CameraConfig cfg, void* scenePtr, uint8_t* outRgbaBuffer, RenderCallback progressCallback) {
 		if (!scenePtr || !outRgbaBuffer) return false;
 
@@ -118,13 +112,10 @@ extern "C" {
 
 		auto world = static_cast<hittable_list*>(scenePtr);
 
-		// Wywo³anie metody render wbudowanej w kamerê
 		cam.render(*world, outRgbaBuffer, progressCallback);
 		return true;
 	}
 
-	// SavePng: zapisuje bufor RGBA8 do pliku PNG przez stb_image_write
-	// buffer: width * height * 4 (RGBA), u³o¿enie wierszy od góry do do³u
 	EXPORT bool SavePng(const char* filePath, int width, int height, const uint8_t* rgbaBuffer) {
 		if (!filePath || !rgbaBuffer || width <= 0 || height <= 0) return false;
 		const int stride = width * 4;
